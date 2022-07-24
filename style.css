@@ -1,9 +1,19 @@
 /******************************************
-*  Author : Payton McCormick
+*  Author : Payton McCormick, Jonathan Bernal, Adam Mazur, Sajen Vasuthevan
 *  Created On : Fri Jul 08 2022
 *  File : style.css
 *******************************************/
 
 body{
     background-color:skyblue;
+}
+
+
+
+.productPics{
+    height:50vh;
+    margin-top:10vh;
+    margin-left:3em;
+    width:80%;
+    background-color:bisque;
 }
