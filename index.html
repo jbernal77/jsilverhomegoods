@@ -32,6 +32,8 @@
 </head>
 
 <body class="container-fluid">
+
+  <!--NAVBAR--> <!-- TODO: Replace with PHP injection? Less repeated code throughout website-->
   <div class="row ">
     <div class="col-12 p-0">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,7 +49,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/categoryPage.php">CATEGORIES PAGE</a><!-- Temp button to categoriesPage.php for testing-->
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -74,80 +76,171 @@
       </nav>
     </div>
   </div>
+  <!--END OF NAVBAR-->
+
+
+  <!--PAGE BANNER-->
   <div class="row">
     <div class="col-12 h1 pt-5 text-center">
       JSilver Home Goods
     </div>
   </div>
-  <div class="row pt-5">
-    <div class="col-3">
+  <!--END OF PAGE BANNER-->
 
-    </div>
-    <div class="col-6 d-flex p-3">
+
+  <!--CATEGORIES-->
+
+  <!--Row 1--> <!--TODO: theres probably a better way to structure these cards, feel free to move them around however.. Just initialized them for testing the php stuff-->
+  <div class="row pt-5">
+    <div class="col-3"></div> <!--This is just to squeeze contents to the middle of the page-->
+    <div class="col-6 d-flex p-3"> 
+
+      <!-- Bead Art-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="/productTemplate.html" class="btn btn-primary">ProductTemplate(TEMP)</a>
+          <h5 class="card-title">Bead Art</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=beadArt" class="btn btn-primary">Bead Art</a>
         </div>
       </div>
+
+      <!--Cards-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Cards</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=cards" class="btn btn-primary">Cards</a>
         </div>
       </div>
+
+      <!--Coozies-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Beer Coozies</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=coozies" class="btn btn-primary">Beer Coozies</a>
         </div>
       </div>
+
+    <!--END OF ROW 1-->
     </div>
   </div>
+
+
+  <!--ROW 2-->
   <div class="row">
     <div class="col-3"></div>
     <div class="col-6 d-flex p-3">
+
+      <!--Cups-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Cups</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=cups" class="btn btn-primary">Cups</a>
         </div>
       </div>
+
+      <!--Decorations-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Decorations</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=decorations" class="btn btn-primary">Decorations</a>
         </div>
       </div>
+
+
+      <!--Resin-->
       <div class="card m-1" style="width: 14rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Resin</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=resin" class="btn btn-primary">Resin</a>
         </div>
       </div>
+
+    <!--End of Row 2-->
     </div>
   </div>
-  <div id="foot">
 
+  <!--ROW 3-->
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 d-flex p-3">
+
+      <!--Shirts-->
+      <div class="card m-1" style="width: 14rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Shirts</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=shirts" class="btn btn-primary">Shirts</a>
+        </div>
+      </div>
+
+      <!--Signs-->
+      <div class="card m-1" style="width: 14rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Signs</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=signs" class="btn btn-primary">Signs</a>
+        </div>
+      </div>
+
+
+      <!--Stickers-->
+      <div class="card m-1" style="width: 14rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Stickers</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=stickers" class="btn btn-primary">Stickers</a>
+        </div>
+      </div>
+
+    <!--End of Row 3-->
+    </div>
   </div>
+
+  <!--ROW 4-->
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 d-flex p-3">
+
+      <!--Towels-->
+      <div class="card m-1" style="width: 14rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Towels</h5>
+          <p class="card-text">Some quick example text</p>
+          <a href="categoryPage.php?category=towels" class="btn btn-primary">Towels</a>
+        </div>
+      </div>
+
+
+    <!--End of Row 4-->
+    </div>
+  </div>
+
+
+
+  <!--END OF CATEGORIES-->
+
+
+  
+  <!--FOOTER--> <!--TODO: Create footer component, apply to all pages-->
+  <div id="foot">
+  </div>
+  <!--END OF FOOTER-->
+
 </body>
 
 </html>
