@@ -21,8 +21,8 @@
 
     <!--JS-->
     <script src=""></script>
-
-    <!--Bootstrap JS-->
+  
+  <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous">
@@ -72,45 +72,44 @@
         $password = "jsilverhomegoods";
         $dbname = "bernal_finalProjectDatabase";
 
-
         $header = $_GET['category'];
         $headerUpper = strtoupper($header);
         echo $headerUpper;
 
-        $conn = new mysqli($servername,$username,$password);
+        $conn = new mysqli($servername,$username,$password,$dbname);
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT  * FROM `Products` WHERE productCategory = '$header'";
+        $sql = "SELECT * FROM `ProductsNew` WHERE productCategory = '$header'";
         $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            while($row == $result->fetch_assoc()){
-                echo "Title: ". $row["productName"];
-            }
-        }
 
         ?>
     </div>
     <br>
 
     <!--PRODUCTS-->
+  <div id="containerRows" class="container">
     <div class="row">
-        <div class="col-12 d-flex">
-            <div class="card m-1" style="width: 14rem;">
-                <img class="card-img-top" src="\" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+      
+      		<?php
+      
+      			 while($row = $result->fetch_assoc()){
+            		echo '<div class="card m-1" style="width: 20rem;">
+                    		<div class="card-body">
+                    	  	<h5 class="card-title">' .$row["productTitle"] .'</h5>
+                            <a href="productTemplate.php?product=' .$row["productName"].'" 
+                            class="btn btn-primary">' .$row["productTitle"].' </a>
+                            </div></div>';
+       			 }
+      		?>
+      			
+        
     </div>
+  </div>
     <!-- END OF PRODUCTS-->
+    
 
 
 
