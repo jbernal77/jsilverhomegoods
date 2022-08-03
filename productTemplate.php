@@ -92,10 +92,11 @@
                 <!--This is a temp container for product picture-->
               	<?php 
               		while($row = $result->fetch_assoc()){
-              			echo "<img src='img\\".$row['productCategory'] . "\\".$row['productIMG']."' class='productPics'>
+              			echo "<img src='img\\".$row['productCategory'] . "\\".$row['productIMG']."' class='productPics' width='100%' height='auto' >
                         </div><div class='col-4 p-5'><div class='productInfo'>";
                       	echo "<h2 class='text-center'>".$row['productTitle']."</h2>";
-                      	echo "<p>" . $row['productLongDesc'] . "</p>";
+                      	echo "<p>" . $row['productLongDesc'] . "</p> <br> 
+							  <h5>$" . $row['productPrice'] . "</h5>";
                     }
              
          
