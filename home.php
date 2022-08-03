@@ -16,7 +16,7 @@ $alphabetically_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h2>Best Selling Products</h2>
     <div class="products">
         <?php foreach ($alphabetically_added_products as $product): ?>
-        <a href="index.php?page=product&id=<?=$product['productID']?>" class="product">
+        <a href="index.php?page=product&productID=<?=$product['productID']?>" class="product">
             <img src="/images/<?=$product['productIMG']?>" width="200" height="200" alt="<?=$product['productName']?>">
             <span class="name"><?=$product['productShortDesc']?></span>
             <span class="price">
