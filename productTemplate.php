@@ -16,7 +16,7 @@
     <meta name="keywords" content=""> <!-- TODO: Fill me in-->
 
     <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="/style.css"> <!-- TODO: link CSS -->
+    <link rel="stylesheet" type="text/css" href="/style.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -64,24 +64,42 @@
             </div>
         </div>
     </nav>
+  
+  <?php
+
+        $servername = "localhost";
+        $username = "bernal_finalProjectDatabase";
+        $password = "jsilverhomegoods";
+        $dbname = "bernal_finalProjectDatabase";
+
+        $header = $_GET['product'];
+        $headerUpper = strtoupper($header);
+
+        $conn = new mysqli($servername,$username,$password,$dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM `ProductsNew` WHERE productName = '$header'";
+        $result = $conn->query($sql);
+
+        ?>
 
     
     <div class="row">
         <div class="col-7">
-            <div class="productPics">
                 <!--This is a temp container for product picture-->
-
-            </div>
-        </div>
-        <div class="col-4 p-5">
-            <div class="productInfo">
-                <!--Temp container for product info-->
-                <h2 class="text-center">Product Name</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
+              	<?php 
+              		while($row = $result->fetch_assoc()){
+              			echo "<img src='img\\".$row['productCategory'] . "\\".$row['productIMG']."' class='productPics'>
+                        </div><div class='col-4 p-5'><div class='productInfo'>";
+                      	echo "<h2 class='text-center'>".$row['productTitle']."</h2>";
+                      	echo "<p>" . $row['productLongDesc'] . "</p>";
+                    }
+             
+         
+              	?>
 
                 <button class="addCart btn btn-primary m-1">Add to Cart</button>
 

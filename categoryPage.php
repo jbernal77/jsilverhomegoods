@@ -102,6 +102,8 @@
                             <a href="productTemplate.php?product=' .$row["productName"].'" 
                             class="btn btn-primary">' .$row["productTitle"].' </a>
                             </div></div>';
+
+                    
        			 }
       		?>
       			
