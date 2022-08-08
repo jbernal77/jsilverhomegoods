@@ -31,6 +31,8 @@ echo <<<EOT
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=products">Products</a>
+                   <a href="index.php?page=login">Account</a>
+                   <a href="index.php?page=logout">Sign Out</a>
                 </nav>
                 <div class="link-icons">
                     <a href="index.php?page=cart">
@@ -51,7 +53,7 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Team 20 - Payton McCormick, Jonathan Bernal, Adam Mazur, Sajen Vasuthevan</p>
+                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan</p>
             </div>
         </footer>
     </body>

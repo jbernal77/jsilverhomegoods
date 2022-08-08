@@ -1,5 +1,5 @@
 <?php
-//on homepage it will show the first 6 products in alphabetical order
+//on homepage it will show the first 4 products in alphabetical order
 $stmt = $pdo->prepare('SELECT * FROM ProductsNew ORDER BY productTitle DESC LIMIT 4');
 $stmt->execute();
 //array contains the query results
