@@ -1,4 +1,10 @@
 <?php
+//for private and public function
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  $cartdisplay = 'display:block';
+}else{
+  $cartdisplay = 'display:none';
+}
 // Check to make sure the id parameter is specified in the URL
 if (isset($_GET['productID'])) {
     // Prepare statement and execute, prevents SQL injection
@@ -26,7 +32,7 @@ if (isset($_GET['productID'])) {
         <span class="price">
             &dollar;<?=$product['productPrice']?>
         </span>
-        <form action="index.php?page=cart" method="post">
+        <form style = <?=$cartdisplay?> action="index.php?page=cart" method="post">
             <input type="number" name="quantity" value="1" min="1" max="<?=$product['productStock']?>" placeholder="Quantity" required>
             <input type="hidden" name="product_id" value="<?=$product['productID']?>">
             <input type="submit" value="Add To Cart">

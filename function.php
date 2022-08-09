@@ -1,4 +1,5 @@
 <?php
+
 function pdo_connect_mysql() {
     // added MySQL details
     $DATABASE_HOST = 'localhost';
@@ -14,15 +15,31 @@ function pdo_connect_mysql() {
 }
 // Template header
 function template_header($title) {
-$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;  
+$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; 
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  $user = 'Hi '.($_SESSION['username']);  
+  $display = 'visibility:visible';
+}else{
+  $user = "";
+  $display = 'visibility:hidden';
+}
+  
 echo <<<EOT
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>JSilver Shopping Cart</title>
+		<title>JSilver Homegoods</title>
 		<link href="cart.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <!--Following 7 tags are from Favicon for the tab icons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
         <header>
@@ -31,13 +48,12 @@ echo <<<EOT
                 <nav>
                     <a href="index.php">Home</a>
                     <a href="index.php?page=products">Products</a>
-                   <a href="index.php?page=login">Account</a>
-                   <a href="index.php?page=logout">Sign Out</a>
-                   <a href="index.php?page=categories">Categories</a>
-                   <a href="index.php?page=about">About</a>
-                   <a href="index.php?page=faq">FAQ</a>
+                    <a href="https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/login.php">Account</a>
+                    <a href="index.php?page=logout">Sign Out</a>
+                    <a href="">$user</a>
+                  
                 </nav>
-                <div class="link-icons">
+                <div style = $display class="link-icons">
                     <a href="index.php?page=cart">
 						<i class="fas fa-shopping-cart"></i>
                         <span>$num_items_in_cart</span>
