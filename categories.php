@@ -3,7 +3,11 @@
 *  Created On : Fri Jul 08 2022
 *  File : categories.php
 ******************************************* -->
+
     <?=template_header('Categories')?>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="description" content="JSilverHomegoods Categories Page">   
+    <meta name="keywords" content="JSilverHomegoods Crafts Categories Products">
 
     <h1 id = "pageTitle">JSilver Home Goods</h1>
     
