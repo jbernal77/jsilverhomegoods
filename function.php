@@ -29,6 +29,7 @@ echo <<<EOT
 <html>
 	<head>
 		<meta charset="utf-8">
+        <meta name="author" content="Payton McCormick, Jonathan Bernal, Adam Mazur, Sajen Vasuthevan">
 		<title>JSilver Homegoods</title>
 		<link href="cart.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
