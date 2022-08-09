@@ -1,4 +1,5 @@
 <?=template_header('Monitor')?>
+<?=template_navbar('Monitor')?>
 <div class="products content-wrapper">
 <h1> JSilver Homegoods Monitor Page </h1>
 <h2> SQL Database Monitor</h2>

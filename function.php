@@ -40,6 +40,13 @@ echo <<<EOT
 		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
+EOT;
+}
+
+
+function template_navbar($title) {    
+
+echo <<<EOT
 	</head>
 	<body>
         <header>
@@ -65,6 +72,7 @@ echo <<<EOT
         <main>
 EOT;
 }
+
 // Template footer
 function template_footer() {
 $year = date('Y');
@@ -80,4 +88,3 @@ echo <<<EOT
 EOT;
 }
 ?>
-

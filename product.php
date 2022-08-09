@@ -24,7 +24,7 @@ if (isset($_GET['productID'])) {
 ?>
 
 <?=template_header('Product')?>
-
+<?=template_navbar('Product')?>
 <div class="product content-wrapper">
     <img src="/images/<?=$product['productIMG']?>" width="500" height="500" alt="<?=$product['productName']?>">
     <div>
