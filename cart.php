@@ -26,7 +26,7 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
         }
     }
     // Prevent form resubmission...
-    header('location: index.php?page=cart');
+    header('location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/index.php?page=cart');
     exit;
 }
 // Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
@@ -49,12 +49,13 @@ if (isset($_POST['update']) && isset($_SESSION['cart'])) {
         }
     }
     // Prevent form resubmission...
-    header('location: index.php?page=cart');
+    header('location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/index.php?page=cart');
     exit;
 }
 // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
 if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    header('Location: index.php?page=placeorder');
+    unset ($_SESSION['cart']);
+    header('Location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/index.php?page=placeorder');
     exit;
 }
 // Check the session variable for products in cart
@@ -100,12 +101,12 @@ if ($products_in_cart) {
                 <?php foreach ($products as $product): ?>
                 <tr>
                     <td class="img">
-                        <a href="index.php?page=product&id=<?=$product['productID']?>">
+                        <a href="index.php?page=product&productID=<?=$product['productID']?>">
                             <img src="/images/<?=$product['productIMG']?>" width="50" height="50" alt="<?=$product['productName']?>">
                         </a>
                     </td>
                     <td>
-                        <a href="index.php?page=product&id=<?=$product['productID']?>"><?=$product['productShortDesc']?></a>
+                        <a href="index.php?page=product&productID=<?=$product['productID']?>"><?=$product['productShortDesc']?></a>
                         <br>
                         <a href="index.php?page=cart&remove=<?=$product['productID']?>" class="remove">Remove</a>
                     </td>

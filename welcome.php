@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/login.php");
+    header("location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/login.php");
     exit;
 }
 ?>
@@ -22,7 +22,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to JSilver Homegoods.</h1>
     <p>
-        <a href="https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+      <a href="https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/index.php" class="btn btn-danger ml-3">Home</a>  
+      <a href="https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
     </p>
 </body>
 </html>
