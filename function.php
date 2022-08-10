@@ -21,6 +21,7 @@ echo <<<EOT
 <html>
 	<head>
 		<meta charset="utf-8">
+        <meta name="author" content="Payton McCormick, Jonathan Bernal, Adam Mazur, Sajen Vasuthevan">
 		<title>JSilver Homegoods</title>
 		<link href="cart.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -79,7 +80,11 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan</p>
+            <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan &emsp;
+            <a href="index.php?page=categories">Categories</a>  &emsp;
+            <a href="index.php?page=about">About</a>  &emsp;
+            <a href="index.php?page=faq">FAQ</a>  &emsp;
+            <a href="index.php?page=shipping">Shipping</a></p>
             </div>
         </footer>
     </body>
