@@ -4,16 +4,17 @@
 *  File : categories.php
 ******************************************* -->
 
-    <?=template_header('Categories')?>
+<?=template_header('Categories')?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="description" content="JSilverHomegoods Categories Page">   
     <meta name="keywords" content="JSilverHomegoods Crafts Categories Products">
+	<?=template_navbar('Categories')?>
 
-    <h1 id = "pageTitle">JSilver Home Goods</h1>
     
     <div id = "containerRows" class = "container">
+      <h1 class="text-center">Categories</h1>
         <!--Row 1-->
-        <div class = "row">   
+        <div class = "row justify-content-between">   
                 <!-- Bead Art-->
                 <div class="card m-1" style="width: 20rem;">
                     <div class="card-body">
@@ -40,7 +41,12 @@
                         <a href="categoryPage.php?category=coozies" class="btn btn-primary">Beer Coozies</a>
                     </div>
                 </div>
-                
+          </div>
+        <!--End of Row 1-->
+      
+      	<!--Row 2-->
+        <div class = "row justify-content-between">
+               	
                 <!--Cups-->
                 <div class="card m-1" style="width: 20rem;">
                     <div class="card-body">
@@ -49,11 +55,7 @@
                         <a href="categoryPage.php?category=cups" class="btn btn-primary">Cups</a>
                     </div>
                 </div>
-        </div>
-        <!--End of Row 1-->
-
-        <!--Row 2-->
-        <div class = "row">
+          
             <!--Decorations-->
                 <div class="card m-1" style="width: 20rem;">
                     <div class="card-body">
@@ -71,6 +73,12 @@
                         <a href="categoryPage.php?category=resin" class="btn btn-primary">Resin</a>
                     </div>
                 </div>    
+          
+          </div>
+        <!--End of Row 2-->
+      
+      	<!--Row 3-->
+        <div class = "row justify-content-between">
         
             <!--Shirts-->
                 <div class="card m-1" style="width: 20rem;">
@@ -89,12 +97,7 @@
                         <a href="categoryPage.php?category=signs" class="btn btn-primary">Signs</a>
                     </div>
                 </div>
-            
-        </div>
-        <!--End of Row 2-->
-
-        <!--Row 3-->
-        <div class = "row">
+        
             <!--Stickers-->
                 <div class="card m-1" style="width: 20rem;">
                     <div class="card-body">
@@ -103,6 +106,11 @@
                     <a href="categoryPage.php?category=stickers" class="btn btn-primary">Stickers</a>
                     </div>
                 </div>
+          
+          </div>
+        <!--End of Row 3-->
+      
+      	<div class="row mb-2 justify-content-center">
                 
             <!--Towels-->
                 <div class="card m-1" style="width: 20rem;">
@@ -112,8 +120,8 @@
                     <a href="categoryPage.php?category=towels" class="btn btn-primary">Towels</a>
                     </div>
                 </div>   
-        </div>
-        <!--End of Row 3-->
+      </div>
+        
     </div>
 
     <?=template_footer()?>

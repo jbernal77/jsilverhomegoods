@@ -81,7 +81,12 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan</p>
+                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan &emsp;
+                <a href="index.php?page=categories">Categories &emsp;</a>
+                <a href="index.php?page=about">About &emsp;</a>
+                <a href="index.php?page=faq">FAQ &emsp;</a>
+                <a href="index.php?page=shipping">Shipping</a></p>
+                
             </div>
         </footer>
     </body>
