@@ -24,5 +24,13 @@
             <br>
             <b>Q</b>: Is there a pickup option?<br>
             A: Yes! You can specify pick-up to negate the shipping fees upon ordering. You can pick your items up at 123 Fake St, Windsor, ON.<br>
+			<b>Q</b>: How do I create an account?<br>
+            A: To create an account click account at the top of the website, sign up now, fill in the required information and youre done.<br>
+            <br>
+			<b>Q</b>: How do I make an order?<br>
+            A: After creating an account you may begin your order. Simply select the item youd like to purchase, select quantity, add to cart, click on your cart and then place order.<br>
+            <br>
+			<b> If you have any other questions please email jsilverhomegoods@gmail.com.<br></b>
+            <br>
     </div>
 <?=template_footer()?>
