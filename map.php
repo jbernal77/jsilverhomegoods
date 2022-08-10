@@ -12,6 +12,9 @@
     }
 </style>
 
+<meta name="description" content="JSilverHomegoods Location">
+<meta name="keywords" content="JSilverHomegoods Map Location Directions GoogleMaps Maps Where Located">
+
 <?= template_navbar('Map') ?>
 
 <!--JS-->
@@ -35,13 +38,12 @@
         var map = new google.maps.Map(document.getElementById("map"), mapProp);
     }
 </script>
+
 <!-- Implementation -->
 <div class="content-wrapper">
 	<div id="map"></div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKx7SbtzHi5MTt8Vbv4_uMLPH_oPe30YY&callback=myMap">
 
-</script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKx7SbtzHi5MTt8Vbv4_uMLPH_oPe30YY&callback=myMap"></script>
 
 <?= template_footer('Map') ?>
