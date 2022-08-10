@@ -44,6 +44,6 @@
 	<div id="map"></div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKx7SbtzHi5MTt8Vbv4_uMLPH_oPe30YY&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfYTVN77fUrH9iNMP4YHmdNE43VIgcnT4&callback=myMap"></script>
 
 <?= template_footer('Map') ?>
