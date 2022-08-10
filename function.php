@@ -14,22 +14,13 @@ function pdo_connect_mysql() {
     }
 }
 // Template header
-function template_header($title) {
-$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  $user = 'Hi '.($_SESSION['username']);  
-  $display = 'visibility:visible';
-}else{
-  $user = "";
-  $display = 'visibility:hidden';
-}
-  
+function template_header($title) { 
+ 
 echo <<<EOT
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-        <meta name="author" content="Payton McCormick, Jonathan Bernal, Adam Mazur, Sajen Vasuthevan">
 		<title>JSilver Homegoods</title>
 		<link href="cart.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -46,7 +37,14 @@ EOT;
 
 
 function template_navbar($title) {    
-
+$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+  if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  $user = 'Hi '.($_SESSION['username']);  
+  $display = 'visibility:visible';
+}else{
+  $user = "";
+  $display = 'visibility:hidden';
+}
 echo <<<EOT
 	</head>
 	<body>
@@ -81,12 +79,7 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan &emsp;
-                <a href="index.php?page=categories">Categories &emsp;</a>
-                <a href="index.php?page=about">About &emsp;</a>
-                <a href="index.php?page=faq">FAQ &emsp;</a>
-                <a href="index.php?page=shipping">Shipping</a></p>
-                
+                <p>&copy; $year, Team 20 - Jonathan Bernal, Adam Mazur, Payton McCormick, Sajen Vasuthevan</p>
             </div>
         </footer>
     </body>
