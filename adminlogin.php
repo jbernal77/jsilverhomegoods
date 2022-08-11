@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is already logged in, if yes then redirect him to admin panel page
 if(isset($_SESSION["adminloggedin"]) && $_SESSION["adminloggedin"] === true){
-    header("location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/admin.php");
+    header("location: https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/adminpanel.php");
     exit;
 }
  
@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["adminusername"] = $adminusername;                            
                             
                             // Redirect user to admin panel page
-                            header("location:https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/admin.php");
+                            header("location:https://bernal.myweb.cs.uwindsor.ca/jsilverhomegoods/adminpanel.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $adminlogin_error = "Invalid username or password.";
@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Login</h2>
+        <h2>Admin Login</h2>
         <p>Please fill in your credentials to login.</p>
 
         <?php 

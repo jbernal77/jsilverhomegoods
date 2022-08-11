@@ -24,11 +24,40 @@ if( $_SESSION["adminloggedin"] === FALSE){
  ?>
  
  <div >
-   <button type="button"class="btn btn-primary" onClick="location.href='./adminAllCustomers.php'">View All Users</button>
-   <button type="button"class="btn btn-primary" onClick="location.href='./adminAddCustomers.php'">Add Users</button>
-   <button type="button"class="btn btn-primary" onClick="location.href='./emaillist.php'">Generate Email List</button>
-   <button type="button"class="btn btn-primary" onClick="location.href='./adminUpdateUser.php'">Update User</button>
- </div>      
+  <h2 class="text-center">All Customers</h2>
+  <table class="table ">
+    <thead>
+      <tr>
+        <th class="text-center">UserID</th>
+        <th class="text-center">Username </th>
+        <th class="text-center">First Name</th>
+        <th class="text-center">Last Name</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Telephone</th>
+      </tr>
+    </thead>
+    <?php
+    //select all data minus the pawwords
+      $sql="SELECT userID, userName, firstName, lastName, email, telephone 
+            FROM Users";
+    //run the query
+      $result=$link-> query($sql);
+    //iif query has results go into while loop
+      if ($result-> num_rows > 0){
+        //use while loop to populate the table
+        while ($row=$result-> fetch_assoc()) {
+  		echo '<tr>';
+        echo '<td class="text-center">'.$row["userID"].'</td>';
+        echo '<td class="text-center">'.$row["userName"].'</td>';
+        echo '<td class="text-center">'.$row["firstName"].'</td>';
+        echo '<td class="text-center">'.$row["lastName"].'</td>';
+        echo '<td class="text-center">'.$row["email"].'</td>';
+        echo '<td class="text-center">'.$row["telephone"].'</td>';
+        echo '</tr>';
+        }
+      } ?>
+    </table>  
+  </div>     
     <script type="text/javascript" src="./assets/js/ajaxWork.js"></script>    
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
