@@ -1,4 +1,7 @@
 <?=template_header('Monitor')?>
+<meta name="description" content="JSilverHomegoods Database Monitor">   
+<meta name="keywords" content="JSilverHomegoods Status Monitor Database Online Offline">
+
 <?=template_navbar('Monitor')?>
 <div class="products content-wrapper">
 <h1> JSilver Homegoods Monitor Page </h1>

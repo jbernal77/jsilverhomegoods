@@ -7,6 +7,9 @@ $alphabetically_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <?=template_header('Home')?>
+<meta name="description" content="JSilverHomegoods Home">   
+<meta name="keywords" content="JSilverHomegoods Home Main Welcome">
+
 <?=template_navbar('Home')?>
 
 <div class="featured">

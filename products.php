@@ -16,6 +16,10 @@ $total_products = $pdo->query('SELECT * FROM ProductsNew')->rowCount();
 ?>
 <!--Making the product template-->
 <?=template_header('Products')?>
+
+<meta name="description" content="JSilverHomegoods All Products">   
+<meta name="keywords" content="JSilverHomegoods Crafts Products List Gallery Items">
+
 <?=template_navbar('Products')?>
 <div class="products content-wrapper">
     <h1>All Products</h1>
