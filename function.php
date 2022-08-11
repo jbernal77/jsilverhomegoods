@@ -88,7 +88,8 @@ echo <<<EOT
             <a href="index.php?page=map">Location</a> &emsp; 
             <a href="index.php?page=contactinfo">Contact</a> &emsp; 
             <a href="index.php?page=extralinks">Extra Links</a> &emsp; 
-            <a href="index.php?page=gallery">Gallery</a>
+            <a href="index.php?page=gallery">Gallery</a> &emsp; 
+            <a href="index.php?page=howto">How-To</a>
             </p>
             </div>
         </footer>
