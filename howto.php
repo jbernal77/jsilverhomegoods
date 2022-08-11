@@ -12,9 +12,11 @@
 <?=template_navbar('HowTo')?>
 
 <div class="content-wrapper text-center pt-5">
-
+<h5>End-User</h5>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yrWhgjCTMHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<br>
+<h5>Admin</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Qp8HdSQShUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
